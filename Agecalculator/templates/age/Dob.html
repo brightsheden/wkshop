@@ -1,0 +1,47 @@
+{% extends 'age/base.html' %}
+
+{% block content %}
+
+
+				<h1>Card Management System</h1>
+				<h2>Save card for sales</h2>
+				
+				<form method="POST" action="age/">
+								{% csrf_token %}
+								<h4>Mtn Cards</h4>
+								Mtn500<input type="text" name="mtn_500"><br>
+								Mtn200<input type="text" name="mtn_200"><br>
+								Mtn100<input type="text" name="mtn_100"><br>
+					<h4>Glo Cards</h4>			
+					Glo500<input type="text" name="glo_500"><br>
+					Glo200<input type="text" name="glo_200"><br>
+					Glo100<input type="text" name="glo_100"><br>
+					
+					<h4>Airtel Card</h4>			
+					Airtel500<input type="text" name="airtel_500"><br>
+					Airtel200<input type="text" name="airtel_200"><br>
+					Airtel100<input type="text" name="airtel_100"><br>
+					<input type="submit">
+				</form>
+				<h1>mtn total balanse:<strong>{{res}}</strong></h1>
+    <!-- form class="form-group ml-2" method="POST" action="age">
+    {% csrf_token %}
+<h2> MtnCard</h2>
+    MTN 500<input type="text" placeholder="Enter Your Year Of Birth" name='odun'></br>
+    MTN200<input type="text" placeholder="Enter Your Year Of Birth" name='odun1'></br>
+    MTN100<input type="text" placeholder="Enter Your Year Of Birth" name='odun2'></br>
+    <button type="submit">Submit</button>
+    </form-->
+    
+    <!--form class="form-group ml-2" method="POST" action="age">
+    {% csrf_token %}
+<h2> GloCard </h2>
+    GLO 500<input type="text" placeholder="Enter Your Year Of Birth" name='hodun0'></br>
+    GLO 200<input type="text" placeholder="Enter Your Year Of Birth" name='hodun1'></br>
+    GLO 100<input type="text" placeholder="Enter Your Year Of Birth" name='hodun2'></br>
+    <button type="submit">Submit</button>
+    </form--->
+    <h3>{{result}}</h3>
+{% endblock %}
+</body>
+</html>

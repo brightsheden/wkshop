@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CardCalc</title>
+  </head>
+  <body>
+    <h2><strong>MTN</strong> total balance #{{result}}</h2>
+    <h3>glo balance:{{res}}</h3>
+    <p>{{mtn}}</p>
+	<h3>airtel balance {{Airt}}</h3>
+	<h2>Balance: #{{total_balance}}</h2>
+	
+	<h2>Enter Card Remain</h2>
+    	<form method="POST" action="">
+								{% csrf_token %}
+								<h4>Mtn Cards</h4>
+								Mtn500<input type="text" name="mtn_500r"><br>
+								Mtn200<input type="text" name="mtn_200r"><br>
+								Mtn100<input type="text" name="mtn_100r"><br>
+					<h4>Glo Cards</h4>			
+					Glo500<input type="text" name="glo_500r"><br>
+					Glo200<input type="text" name="glo_200r"><br>
+					Glo100<input type="text" name="glo_100r"><br>
+					
+					<h4>Airtel Card</h4>			
+					Airtel500<input type="text" name="airtel_500r"><br>
+					Airtel200<input type="text" name="airtel_200r"><br>
+					Airtel100<input type="text" name="airtel_100r"><br>
+					<input type="submit">
+				</form>
+	<h2><strong>MTN</strong> total balance #{{mtnr}}</h2>
+    <h3>glo balance:{{glo}}</h3>
+    
+	<h3>airtel balance {{Airtel}}</h3>
+	<h2>Balance: #{{total_balance2}}</h2>
+	
+
+{% if messages %}
+{% for message in messages %}
+<h2>{{message}}</h2>
+{% endfor %}
+{% endif %}
+
+  </body>
+</html>
